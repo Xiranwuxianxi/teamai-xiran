@@ -1,0 +1,12 @@
+{
+  "name": "global-biblio-base",
+  "displayName": "全球12亿文献知识库（8千万中文期刊可下载）",
+  "description": "全球12亿文献知识库（8000万中文期刊可下载）——AI对话检索、全文下载与来源核验，免费试用100次检索+10次下载/月。SmartLib 核心引流技能。",
+  "version": "3.8.0",
+  "author": {
+    "name": "SmartLib"
+  },
+  "homepage": "https://skillhub.tencent.com",
+  "repository": "https://github.com/J-levee/global-biblio-base",
+  "license": "MIT"
+}

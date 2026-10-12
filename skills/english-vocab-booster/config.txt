@@ -1,0 +1,6 @@
+# English Vocab Booster 配置文件
+default_word_count=20
+review_days=7
+difficulty_level=CET4
+save_path=./progress.txt
+
