@@ -1,5 +1,5 @@
 ---
-name: "ifind-finance-data"
+name: ifind-finance-data
 description: "同花顺iFinD金融数据查询，查询股票、基金、宏观经济、行业经济、新闻公告、债券、港美股、指数板块及期货期权数据；其中A股、中国公募基金、债券交易所、国内指数共4类市场支持日内高频/实时行情的level1数据，同时支持智能选股、选基、宏观行业经济指标搜索、金融公告资讯搜索等服务"
 homepage: https://mcp.51ifind.com/?cid=c1_UGhY#/
 version: 1.4.0
