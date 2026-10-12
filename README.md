@@ -90,6 +90,7 @@ teamai pull --force         # 其他节点同步
 | OpenClaw | ✅ | ✅ | ✅ | ✅ |
 | Copilot | ✅ | ✅ | ✅ | ✅ |
 | Claude Code / Codex / Cursor 等 | ✅ | ✅ | ✅ | 视版本 |
+| **WorkBuddy（小智）** | ✅ | ✅ | ✅ | ✅ |
 
 （矩阵以 `teamai` CLI 官方 [README](https://github.com/Tencent/teamai-cli) 为准，CLI 持续更新中。）
 
@@ -98,6 +99,7 @@ teamai pull --force         # 其他节点同步
 | 节点 | 位置 | 备注 |
 |---|---|---|
 | 药灵（Hermes Agent） | 腾讯云轻量 2C2G，118.89.90.232 | 主节点，会话钩子自动 pull |
+| 小智（WorkBuddy） | Windows 本地 | hooks 已注入，当前会话节点 |
 
 ## 维护记录
 
