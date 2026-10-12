@@ -1,0 +1,21 @@
+{
+  "name": "平安证券研报检索",
+  "installedAt": 1788069594246,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2079451772586565632",
+  "examples_zh": [
+    "帮我查一下中国平安最近的研报观点",
+    "光模块行业最新研报怎么看",
+    "半导体行业有哪些风险提示"
+  ],
+  "examples_en": [
+    "Search recent research report views about Ping An Insurance",
+    "Find recent research views on the optical module industry",
+    "Find risk warnings in semiconductor industry reports"
+  ],
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451772586565632/5616ea649d2d1692.svg",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\skill_2079451772586565632\\_icon.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451772586565632/5616ea649d2d1692.svg",
+  "installedContentHash": "sha256:72f1ec8802e345c5c143b95f8cbbabe6ecbfc7787ff5fbfa743dde3c957e626c"
+}

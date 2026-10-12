@@ -1,0 +1,9 @@
+{
+  "slug": "tencent-meeting-skill",
+  "name": "腾讯会议",
+  "version": "1.0.10",
+  "installedAt": 1781340031709,
+  "source": "skillhub",
+  "iconDownloadFailedAt": 1791796280541,
+  "installedContentHash": "sha256:29dcf53a5768946ff588eff35f53002021448bf9a46023b68fc743aa3e68d9f0"
+}

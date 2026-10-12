@@ -1,0 +1,14 @@
+{
+  "name": "创业可以学",
+  "installedAt": 1778401050896,
+  "source": "marketplace",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/the-entrepreneurship-handbook.png",
+  "version": "1.0.0",
+  "skillId": "skill_2053083248287678464",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\the-entrepreneurship-handbook\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/the-entrepreneurship-handbook.png",
+  "skillName": "the-entrepreneurship-handbook",
+  "description_zh": "服务创业者和管理者，解答创业/商业/管理问题，引发深度思考",
+  "description_en": "Business Q&A for founders and managers, with reflective follow-up questions",
+  "installedContentHash": "sha256:8b19b390bb25a1ef092f33808bdd22beddc397b717748f22b3b627027e8b0172"
+}

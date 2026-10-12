@@ -1,0 +1,14 @@
+{
+  "name": "A股每日复盘",
+  "installedAt": 1788069583418,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2076628582742429696",
+  "examples_zh": [
+    "帮我生成今天的A股每日复盘报告，用三维一体看盘风格"
+  ],
+  "iconSource": "letter:auto",
+  "description_zh": "A股每日收盘后全维度复盘报告生成，支持五种分析风格，输出自包含HTML报告。",
+  "description_en": "Comprehensive A-share daily market review with 5 analysis styles, output as self-contained HTML report.",
+  "installedContentHash": "sha256:19154024d850db03f267b443120827d64a062ceb6a6f7779c6dba866765a24b6"
+}

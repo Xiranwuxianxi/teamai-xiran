@@ -1,0 +1,14 @@
+{
+  "name": "金融数据-东方财富妙想",
+  "installedAt": 1788069568641,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2082782015765295104",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_6bfe7105-27b.png",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\mx-finance-data\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_6bfe7105-27b.png",
+  "skillName": "mx-finance-data",
+  "description_zh": "自然语言查询多品类金融数据，输出XLSX、Markdown文件",
+  "description_en": "Query multi-category financial data via natural language; output XLSX & Markdown",
+  "installedContentHash": "sha256:9ce28e49c18ef46ad8da421fcd60e8e1ee21d20f3404f76a00c2950f0efc7515"
+}

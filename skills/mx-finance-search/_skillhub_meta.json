@@ -1,0 +1,13 @@
+{
+  "name": "市场搜索-东方财富妙想",
+  "installedAt": 1788151304272,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2082783487745413120",
+  "description_zh": "检索公告、研报、财经新闻、政策资讯",
+  "description_en": "Retrieve announcements, research reports, financial news and policies",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_80e5c6ce-ff3.png",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\mx-finance-search\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_80e5c6ce-ff3.png",
+  "installedContentHash": "sha256:7b99640a009a5f07c4d935fbbdfa8863ff8d227fcd6d81d8f7387bcf4823dbe2"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "综合诊股-东方财富妙想",
+  "installedAt": 1788069576324,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2082786960621715456",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_f0c53fab-7fb.png",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\stock-diagnosis\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_f0c53fab-7fb.png",
+  "skillName": "stock-diagnosis",
+  "description_zh": "个股综合评估，输出Markdown综合诊断报告",
+  "description_en": "Comprehensive evaluation for single A-share stock; output Markdown report",
+  "installedContentHash": "sha256:5cc662eaa2311cb3776c4471f73d575a9059c898e3e442d4b8a916d6be5aa06f"
+}

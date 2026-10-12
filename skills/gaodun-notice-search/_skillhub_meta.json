@@ -1,0 +1,11 @@
+{
+  "name": "公告快速查询",
+  "installedAt": 1788401037910,
+  "source": "marketplace",
+  "version": "1.2.7",
+  "skillId": "skill_2089642798870765568",
+  "description_zh": "按省份、考试类型、年份、招考状态检索官方公告，支持标题关键词搜索（跳字匹配），汇总报名时间、招录人数、考试大纲、报考流程等关键要点；仅问考试时间/科目/条件等政策常识且未提\"公告\"时不适用（走报考答疑）。",
+  "description_en": "Searches official recruitment notices by province, exam type, year, and status, with title keyword search; summarizes application periods, headcounts, syllabi, and application procedures.",
+  "iconSource": "letter:auto",
+  "installedContentHash": "sha256:cc8d63438b3f9300bfc2e7848e0bdd95420c30abc1e4a5ffa2b9038b149cf683"
+}

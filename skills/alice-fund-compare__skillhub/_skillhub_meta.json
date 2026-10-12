@@ -1,0 +1,13 @@
+{
+  "slug": "alice-fund-compare",
+  "name": "Wind Alice-基金对比分析",
+  "version": "1.0.2",
+  "installedAt": 1788912461625,
+  "source": "skillhub",
+  "namespace": "org-r64ixwde",
+  "canonicalName": "@org-r64ixwde/alice-fund-compare",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\alice-fund-compare__skillhub\\_icon.png",
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+  "installedContentHash": "sha256:c61c42464dbd04832dc9a1f96ff2267762e2a68b8c8e22f4dc7c4eaff8a1e0c9"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "fintrust-deep-research-runtime",
+  "private": true,
+  "version": "3.3.0",
+  "dependencies": {
+    "echarts": "^6.1.0"
+  }
+}

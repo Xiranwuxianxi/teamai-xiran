@@ -1,0 +1,23 @@
+{
+  "name": "前端开发",
+  "installedAt": 1781340059657,
+  "source": "marketplace",
+  "version": "0.1.1",
+  "skillId": "skill_2052764137292271616",
+  "examples_zh": [
+    "帮我做一个产品落地页",
+    "给这个页面加上动效",
+    "用 AI 生成配图并插入页面"
+  ],
+  "examples_en": [
+    "Build a product landing page",
+    "Add cinematic animations to this page",
+    "Generate AI images and embed them in the page"
+  ],
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/frontend-dev.svg",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\skill_2052764137292271616\\_icon.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/frontend-dev.svg",
+  "installedContentHash": "sha256:9563cb07c4ccd5a844bdc48c56a5ca16d83356b919a1c5fe5263088e2b9a9717",
+  "description_zh": "前端开发与 AI 媒体生成",
+  "description_en": "Frontend development with AI media and animations"
+}

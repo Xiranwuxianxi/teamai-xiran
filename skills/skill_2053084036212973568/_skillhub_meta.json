@@ -1,0 +1,21 @@
+{
+  "name": "腾讯文档",
+  "installedAt": 1778401039978,
+  "source": "marketplace",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-docs.png",
+  "version": "1.0.36",
+  "skillId": "skill_2053084036212973568",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\skill_2053084036212973568\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-docs.png",
+  "examples_zh": [
+    "新建一个名为Q1预算的Excel表格",
+    "搜索我的空间里关于项目路线图的文档",
+    "创建一个产品发布的PPT演示文稿"
+  ],
+  "examples_en": [
+    "Create a new Excel spreadsheet titled Q1 Budget",
+    "Search for documents about project roadmap",
+    "Create a presentation about our product launch"
+  ],
+  "installedContentHash": "sha256:61908ccb6b310ea99e1d55211a15f2104770aa4a30e729c8ee1a44df4b171322"
+}

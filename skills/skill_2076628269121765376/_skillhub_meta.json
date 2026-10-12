@@ -1,0 +1,12 @@
+{
+  "name": "每日财经新闻",
+  "installedAt": 1788069584544,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2076628269121765376",
+  "examples_zh": [
+    "获取今天的财经新闻并生成汇总报告"
+  ],
+  "iconSource": "letter:auto",
+  "installedContentHash": "sha256:918bd256b85d2e3d7765e1e69097ae4c8bce324131542b5e38e0b87e5d8ef4de"
+}

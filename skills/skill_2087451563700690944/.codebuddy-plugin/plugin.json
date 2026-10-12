@@ -1,0 +1,11 @@
+{
+  "name": "fintrust-deep-research",
+  "version": "3.7.5",
+  "description": "股票/个股投资研究与交互HTML研报。分析下、帮我看看、怎么样、怎么看、能买吗，以及财报、估值、基本面、行情、机构、资金、催化剂、护城河、同行对比时使用；工商注册与公众号搜文除外。",
+  "author": {
+    "name": "FinTrust"
+  },
+  "skills": [
+    "."
+  ]
+}

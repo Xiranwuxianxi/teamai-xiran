@@ -1,0 +1,272 @@
+{
+  "outer_summary": "结论先行与要点摘要",
+  "outer_deep": "深度分析",
+  "outer_summary_blocks": [
+    "投资概览",
+    "投资亮点",
+    "投资风险",
+    "前瞻催化剂"
+  ],
+  "modules": [
+    {
+      "title": "公司基本面",
+      "subsections": [
+        "商业模式",
+        "收入构成",
+        "地区分布",
+        "核心产品",
+        "战略指引",
+        "并购动态",
+        "收入趋势",
+        "利润结构",
+        "现金流",
+        "资产负债表",
+        "资本与研发"
+      ]
+    },
+    {
+      "title": "估值分析",
+      "subsections": [
+        "估值倍数",
+        "同行对比",
+        "目标价",
+        "52周高低",
+        "相对强弱"
+      ]
+    },
+    {
+      "title": "行业洞察",
+      "subsections": [
+        "行业概览",
+        "景气度",
+        "集中度",
+        "竞争格局",
+        "行业特色指标",
+        "护城河",
+        "关键竞争对手"
+      ]
+    },
+    {
+      "title": "风险信号",
+      "subsections": [
+        "盈利质量",
+        "管理层与股权",
+        "内部人交易",
+        "债务流动性",
+        "监管风险",
+        "宏观敏感性",
+        "地缘政治"
+      ]
+    },
+    {
+      "title": "机构与资金动向",
+      "subsections": [
+        "前十大持仓变动",
+        "持仓集中度",
+        "做空比例"
+      ]
+    },
+    {
+      "title": "最新事件与催化剂",
+      "subsections": [
+        "财报摘要",
+        "重大公告",
+        "讲话与投资者日",
+        "行业影响",
+        "下次财报预期",
+        "即将到来的节点"
+      ]
+    }
+  ],
+  "required_h2": [
+    "公司基本面",
+    "估值分析",
+    "行业洞察",
+    "风险信号",
+    "机构与资金动向",
+    "最新事件与催化剂"
+  ],
+  "required_h3": [
+    {
+      "module": "公司基本面",
+      "subsection": "商业模式"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "收入构成"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "地区分布"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "核心产品"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "战略指引"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "并购动态"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "收入趋势"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "利润结构"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "现金流"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "资产负债表"
+    },
+    {
+      "module": "公司基本面",
+      "subsection": "资本与研发"
+    },
+    {
+      "module": "估值分析",
+      "subsection": "估值倍数"
+    },
+    {
+      "module": "估值分析",
+      "subsection": "同行对比"
+    },
+    {
+      "module": "估值分析",
+      "subsection": "目标价"
+    },
+    {
+      "module": "估值分析",
+      "subsection": "52周高低"
+    },
+    {
+      "module": "估值分析",
+      "subsection": "相对强弱"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "行业概览"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "景气度"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "集中度"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "竞争格局"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "行业特色指标"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "护城河"
+    },
+    {
+      "module": "行业洞察",
+      "subsection": "关键竞争对手"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "盈利质量"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "管理层与股权"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "内部人交易"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "债务流动性"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "监管风险"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "宏观敏感性"
+    },
+    {
+      "module": "风险信号",
+      "subsection": "地缘政治"
+    },
+    {
+      "module": "机构与资金动向",
+      "subsection": "前十大持仓变动"
+    },
+    {
+      "module": "机构与资金动向",
+      "subsection": "持仓集中度"
+    },
+    {
+      "module": "机构与资金动向",
+      "subsection": "做空比例"
+    },
+    {
+      "module": "最新事件与催化剂",
+      "subsection": "财报摘要"
+    },
+    {
+      "module": "最新事件与催化剂",
+      "subsection": "重大公告"
+    },
+    {
+      "module": "最新事件与催化剂",
+      "subsection": "讲话与投资者日"
+    },
+    {
+      "module": "最新事件与催化剂",
+      "subsection": "行业影响"
+    },
+    {
+      "module": "最新事件与催化剂",
+      "subsection": "下次财报预期"
+    },
+    {
+      "module": "最新事件与催化剂",
+      "subsection": "即将到来的节点"
+    }
+  ],
+  "chart_section_map": {
+    "market_snapshot": "估值分析",
+    "market_prev_close_compare": "估值分析",
+    "price_technical": "估值分析",
+    "price_target": "估值分析",
+    "revenue_mix": "公司基本面",
+    "revenue_geo": "公司基本面",
+    "revenue_estimate": "公司基本面",
+    "earnings_estimate": "公司基本面",
+    "ebitda_estimate": "公司基本面",
+    "institutional_views": "估值分析",
+    "earnings_surprise": "最新事件与催化剂"
+  },
+  "chart_subsection_map": {
+    "price_technical": "相对强弱",
+    "market_snapshot": "52周高低",
+    "price_target": "目标价",
+    "institutional_views": "目标价",
+    "revenue_mix": "收入构成",
+    "revenue_geo": "地区分布",
+    "revenue_estimate": "收入趋势",
+    "earnings_estimate": "利润结构",
+    "ebitda_estimate": "利润结构",
+    "earnings_surprise": "财报摘要"
+  }
+}

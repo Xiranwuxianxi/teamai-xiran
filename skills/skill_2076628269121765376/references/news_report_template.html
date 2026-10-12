@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>财经新闻汇总 — YYYY-MM-DD</title>
+<style>
+  :root {
+    --bg: #faf8f5; --card: #fffefb; --text: #1c1917; --muted: #78716c;
+    --border: #e7e5e4; --accent: #1c1917; --red: #b91c1c; --green: #166534;
+    --tag-bg: #f5f5f4; --tag-text: #44403c;
+    --header-from: #292524; --header-to: #57534e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65; padding: 24px 16px;
+  }
+  .container { max-width: 880px; margin: 0 auto; }
+  /* 编辑部资讯风：纸感头 + 时间线，非通用渐变卡壳 */
+  .header {
+    background: linear-gradient(180deg, #f5f0e8 0%, var(--card) 100%);
+    color: var(--text); border-radius: 0; padding: 28px 8px 20px; margin-bottom: 8px;
+    border-bottom: 3px double var(--accent);
+  }
+  .header h1 {
+    font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+    font-size: 1.75rem; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .header .meta { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+  .tldr {
+    background: var(--card); border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    border-radius: 0; padding: 16px 4px; margin-bottom: 20px;
+  }
+  .tldr h2 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .tldr ul { padding-left: 1.1em; font-size: 0.95rem; }
+  .tldr li { margin: 6px 0; }
+  .stats {
+    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;
+  }
+  .stat {
+    background: transparent; border: none; border-right: 1px solid var(--border);
+    border-radius: 0; padding: 8px 16px 8px 0; min-width: 100px; flex: 1;
+  }
+  .stat:last-child { border-right: none; }
+  .stat .label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; }
+  .stat .value { font-size: 1.35rem; font-weight: 700; color: var(--accent); margin-top: 2px; font-variant-numeric: tabular-nums; }
+  h2.section {
+    font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+    font-size: 1.15rem; font-weight: 600; margin: 32px 0 14px;
+    padding-bottom: 8px; border-bottom: 1px solid var(--accent); color: var(--accent);
+  }
+  .article {
+    background: transparent; border: none; border-left: 2px solid #d6d3d1;
+    border-radius: 0; padding: 4px 0 18px 18px; margin-bottom: 8px; position: relative;
+  }
+  .article::before {
+    content: ""; position: absolute; left: -5px; top: 10px; width: 8px; height: 8px;
+    border-radius: 50%; background: var(--accent);
+  }
+  .article .title { font-size: 1.05rem; font-weight: 650; margin-bottom: 6px; line-height: 1.4; }
+  .article .meta-row {
+    font-size: 0.8rem; color: var(--muted); margin-bottom: 10px;
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  }
+  .tag {
+    display: inline-block; background: var(--tag-bg); color: var(--tag-text);
+    font-size: 0.72rem; padding: 2px 8px; border-radius: 2px; font-weight: 500;
+  }
+  .article .body { font-size: 0.92rem; color: #333; }
+  .article .body p { margin-bottom: 0.7em; }
+  .article .body p:last-child { margin-bottom: 0; }
+  .article a { color: #9a3412; text-decoration: none; border-bottom: 1px dotted #c2410c; }
+  .article a:hover { text-decoration: none; border-bottom-style: solid; }
+  .impact { margin-top: 10px; padding: 10px 12px; background: #f5f5f4; border-left: 3px solid var(--accent);
+    font-size: 0.88rem; color: #374151; }
+  .impact strong { color: var(--accent); }
+  .telegraph-list { list-style: none; border-left: 2px solid #d6d3d1; padding-left: 16px; }
+  .telegraph-list li {
+    background: transparent; border: none; border-bottom: 1px dashed var(--border); border-radius: 0;
+    padding: 10px 0; margin-bottom: 0; font-size: 0.88rem; position: relative;
+  }
+  .telegraph-list li::before {
+    content: ""; position: absolute; left: -21px; top: 16px; width: 8px; height: 8px;
+    border-radius: 50%; background: #a8a29e;
+  }
+  .telegraph-list .time { color: var(--muted); font-size: 0.78rem; margin-right: 8px; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .footer {
+    margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.75rem; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>财经新闻汇总</h1>
+    <div class="meta">日期：YYYY-MM-DD · 时段：HH:MM–HH:MM HKT · 去重后 N 条</div>
+  </div>
+
+  <!-- 首屏结论先行（编辑部资讯风） -->
+  <div class="tldr">
+    <h2>今日要点</h2>
+    <ul>
+      <li>[3–6 条一句话要点：事件 + 市场含义]</li>
+    </ul>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="label">抓取条数</div><div class="value">X</div></div>
+    <div class="stat"><div class="label">去重后</div><div class="value">Y</div></div>
+    <div class="stat"><div class="label">主题数</div><div class="value">Z</div></div>
+  </div>
+
+  <!-- 按主题重复以下区块 -->
+  <h2 class="section">一、[主题名，如：国际宏观 / 货币政策]</h2>
+
+  <div class="article">
+    <div class="title">[新闻标题]</div>
+    <div class="meta-row">
+      <span>HH:MM</span>
+      <span class="tag">[来源]</span>
+      <a href="URL" target="_blank" rel="noopener">原文链接</a>
+    </div>
+    <div class="body">
+      <p>[深度概括第 1 段：核心事件]</p>
+      <p>[第 2 段：关键数据 / 人物表态 / 背景]</p>
+      <p>[第 3 段：市场影响]</p>
+    </div>
+    <div class="impact"><strong>所以呢：</strong>[一句话操作/观察含义，非买卖建议]</div>
+  </div>
+
+  <!-- 能力二：快讯/电报模式可用下方列表结构 -->
+  <!--
+  <h2 class="section">市场快讯</h2>
+  <ul class="telegraph-list">
+    <li><span class="time">14:32</span>[title｜content 归一化文本]</li>
+  </ul>
+  -->
+
+  <div class="footer">
+    以上内容基于公开资讯整理，仅供市场热度追踪与投顾沟通参考，不构成投资建议。
+  </div>
+</div>
+</body>
+</html>

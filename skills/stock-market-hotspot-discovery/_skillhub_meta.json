@@ -1,0 +1,14 @@
+{
+  "name": "热点发现-东方财富妙想",
+  "installedAt": 1788069576810,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2082786675396460544",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_032e0355-df4.png",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\stock-market-hotspot-discovery\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/852eadde-1318-4d58-9880-b97ef76baeea/avatar/skill/au_032e0355-df4.png",
+  "skillName": "stock-market-hotspot-discovery",
+  "description_zh": "识别A股市场热点板块与热门个股热度",
+  "description_en": "Identify hot sectors and popular stocks in A-share market",
+  "installedContentHash": "sha256:57bcb697b0629c40e4abc65d3f6acb3dd4be8a82055647ef2e480c5adf76ee81"
+}

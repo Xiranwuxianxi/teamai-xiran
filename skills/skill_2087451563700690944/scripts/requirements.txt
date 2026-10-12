@@ -1,0 +1,2 @@
+# deep-research skill scripts 唯一第三方依赖
+requests>=2.31

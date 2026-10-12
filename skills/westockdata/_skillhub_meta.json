@@ -1,0 +1,13 @@
+{
+  "name": "腾讯自选股-金融数据查询",
+  "installedAt": 1788151301495,
+  "source": "marketplace",
+  "version": "1.0.12",
+  "skillId": "skill_2053083170922696704",
+  "description_zh": "A股/港股/美股行情数据查询（K线、财报、资金流、技术指标、板块排行）",
+  "description_en": "A-share/HK/US stock data: K-line, financials, capital flow, technicals & more",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/common/capability_cover/371ef1f7-23f3-44ff-b84c-b888edc9f787/e873c571-2e16-4d6b-912b-79c6bb9f2a7d.png",
+  "installedContentHash": "sha256:ae21b47e1b1cfccee712f38a344b0a403815cc578583a244b2f47fe620793b66",
+  "iconLocalPath": "C:\\Users\\76809\\.workbuddy\\skills\\westockdata\\_icon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/common/capability_cover/371ef1f7-23f3-44ff-b84c-b888edc9f787/e873c571-2e16-4d6b-912b-79c6bb9f2a7d.png"
+}
