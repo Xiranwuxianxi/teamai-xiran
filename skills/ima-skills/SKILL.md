@@ -1,6 +1,6 @@
 ---
 name: ima-skills
-description: ""
+description: "ima-skill: 统一的 IMA OpenAPI 技能，支持笔记管理和知识库操作（读取、写入、检索）。当用户提到知识库、资料库、笔记、备忘录、记事，或 IMA 相关需求时使用。"
 version: 1.1.9
 homepage: "https://ima.qq.com"
 display_name: "腾讯ima"
