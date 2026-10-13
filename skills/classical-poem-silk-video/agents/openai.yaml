@@ -1,0 +1,4 @@
+interface:
+  display_name: "古诗绢本动态视频"
+  short_description: "将整首古诗分景生成绢本画、动态原声视频与逐字题跋成片"
+  default_prompt: "Use $classical-poem-silk-video to turn this Chinese poem into a coherent vertical aged-silk video."
