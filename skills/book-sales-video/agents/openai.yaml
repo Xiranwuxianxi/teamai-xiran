@@ -1,0 +1,8 @@
+interface:
+  display_name: "图书带货视频"
+  short_description: "从书名与书评研究到配音、配图和可编辑视频初稿的完整流程"
+  brand_color: "#D97706"
+  default_prompt: "使用 $book-sales-video，根据我提供的书名或飞书文案制作一条图书带货短视频。"
+
+policy:
+  allow_implicit_invocation: true

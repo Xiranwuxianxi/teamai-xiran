@@ -1,0 +1,157 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check shell syntax
+        run: |
+          bash -n install.sh
+          for script in scripts/*.sh; do bash -n "$script"; done
+
+      - name: Check JavaScript syntax
+        run: |
+          for script in scripts/*.mjs; do node --check "$script"; done
+
+      - name: Validate skill frontmatter and JSON assets
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          text = Path("SKILL.md").read_text(encoding="utf-8")
+          assert text.startswith("---\n"), "SKILL.md must start with YAML frontmatter"
+          _, frontmatter, _ = text.split("---", 2)
+          fields = {}
+          for line in frontmatter.splitlines():
+              if ":" in line:
+                  key, value = line.split(":", 1)
+                  fields[key.strip()] = value.strip()
+          assert fields.get("name") == "hbg-life-simulation"
+          assert fields.get("description"), "description is required"
+          assert set(fields) == {"name", "description"}, "only name and description are allowed"
+
+          for path in Path("assets").glob("*.json"):
+              json.loads(path.read_text(encoding="utf-8"))
+          PY
+
+      - name: Block credentials and local project data
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          forbidden_literals = (
+              "/" + "Users/",
+              "codex." + "huamosi.com",
+              "gh" + "o_",
+              "7e5f" + "23de",
+              "SCRIPT_SOURCE.md" + "【",
+          )
+          secret_patterns = (
+              re.compile(r"gh[opsu]_[A-Za-z0-9]{20,}"),
+              re.compile(r"(?i)bearer\s+[A-Za-z0-9._-]{20,}"),
+              re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b"),
+              re.compile(r"hbg-local-[a-f0-9]{32,}"),
+              re.compile(r"(?<![A-Fa-f0-9])[A-Fa-f0-9]{64}(?![A-Fa-f0-9])"),
+          )
+
+          for path in Path(".").rglob("*"):
+              if not path.is_file() or ".git" in path.parts:
+                  continue
+              assert path.name not in {"client.env", "config.yaml"}, f"local proxy secret file tracked: {path}"
+              assert "auths" not in path.parts and "logs" not in path.parts, f"local proxy state tracked: {path}"
+              try:
+                  text = path.read_text(encoding="utf-8")
+              except UnicodeDecodeError:
+                  continue
+              for literal in forbidden_literals:
+                  assert literal not in text, f"forbidden local or credential marker in {path}: {literal}"
+              for pattern in secret_patterns:
+                  assert not pattern.search(text), f"possible credential in {path}: {pattern.pattern}"
+          PY
+
+      - name: Smoke-test style initialization
+        run: |
+          temp_dir=$(mktemp -d)
+          mkdir -p "$temp_dir/landscape" "$temp_dir/portrait"
+          node scripts/init_project_style.mjs "$temp_dir/landscape"
+          node scripts/init_project_style.mjs "$temp_dir/portrait" --orientation portrait
+          test -s "$temp_dir/landscape/HBG_STYLE.json"
+          test -s "$temp_dir/portrait/HBG_STYLE.json"
+
+      - name: Check installer help
+        run: ./install.sh --help
+
+      - name: Check consent-gated local account API bootstrap
+        run: |
+          scripts/setup_local_cliproxyapi.sh --help
+          scripts/setup_local_cliproxyapi.sh bootstrap --dry-run --provider codex
+          empty_root=$(mktemp -d)
+          set +e
+          ready_output=$(scripts/setup_local_cliproxyapi.sh ready --root "$empty_root")
+          ready_code=$?
+          set -e
+          test "$ready_output" = "not-configured"
+          test "$ready_code" -eq 3
+          test ! -e "$empty_root/OAUTH_RISK_ACCEPTED"
+
+          state_root=$(mktemp -d)
+          mkdir -p "$state_root/bin" "$state_root/auths" "$state_root/logs"
+          cp .github/tests/mock_cliproxy.py "$state_root/bin/cli-proxy-api"
+          chmod 700 "$state_root" "$state_root/bin" "$state_root/auths" "$state_root/logs" "$state_root/bin/cli-proxy-api"
+          printf '%s\n' \
+            'host: "127.0.0.1"' \
+            'port: 18317' \
+            "auth-dir: \"$state_root/auths\"" \
+            'api-keys:' \
+            '  - "hbg-test-local-only"' > "$state_root/config.yaml"
+          printf '%s\n' \
+            "export OPENAI_BASE_URL='http://127.0.0.1:18317/v1'" \
+            "export OPENAI_API_KEY='hbg-test-local-only'" \
+            "export HBG_IMAGE_MODEL='gpt-image-2'" > "$state_root/client.env"
+          chmod 600 "$state_root/config.yaml" "$state_root/client.env"
+
+          set +e
+          stopped_output=$(scripts/setup_local_cliproxyapi.sh ready --root "$state_root" --port 18317)
+          stopped_code=$?
+          set -e
+          test "$stopped_output" = "not-running"
+          test "$stopped_code" -eq 4
+
+          HBG_TEST_HTTP_CODE=401 scripts/setup_local_cliproxyapi.sh start --root "$state_root" --port 18317
+          set +e
+          unhealthy_output=$(scripts/setup_local_cliproxyapi.sh ready --root "$state_root" --port 18317)
+          unhealthy_code=$?
+          set -e
+          test "$unhealthy_output" = "unhealthy"
+          test "$unhealthy_code" -eq 5
+          scripts/setup_local_cliproxyapi.sh stop --root "$state_root" --port 18317
+
+          HBG_TEST_HTTP_CODE=200 scripts/setup_local_cliproxyapi.sh start --root "$state_root" --port 18317
+          test "$(scripts/setup_local_cliproxyapi.sh ready --root "$state_root" --port 18317)" = "ready"
+          scripts/setup_local_cliproxyapi.sh stop --root "$state_root" --port 18317
+          test ! -e "$state_root/OAUTH_RISK_ACCEPTED"
+
+          if ./install.sh --with-local-proxy --target "$(mktemp -d)"; then
+            echo "installer must require explicit OAuth risk acceptance" >&2
+            exit 1
+          fi
+          test ! -e client.env
+          test ! -e config.yaml
+          test ! -d auths
+          test ! -d logs
